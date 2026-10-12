@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Studio Spark is a responsive student multimedia showcase for creative technology projects from the College of Information Technology.">
+  <meta name="theme-color" content="#e60023">
+  <title>Studio Spark | Student Multimedia Showcase</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Studio Spark home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>Studio Spark</span>
+      </a>
+
+      <button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="primary-links">
+        <span class="sr-only">Open navigation</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <div class="nav-links" id="primary-links">
+        <a href="#projects">Projects</a>
+        <a href="#premiere">Premiere</a>
+        <a href="#about">About</a>
+        <a class="nav-external" href="https://uls.edu.ph/offices/colleges/college-of-information-technology/" target="_blank" rel="noopener noreferrer">
+          CIT website <span aria-hidden="true">↗</span>
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+      </div>
+
+      <a class="button button-primary nav-cta" href="#projects">Explore work</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true"></span> Student Multimedia Showcase 2026</p>
+        <h1 id="hero-title">Ideas worth seeing, hearing, and trying.</h1>
+        <p class="hero-lede">Discover student-built apps, short films, and interactive experiences from the College of Information Technology.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Browse the showcase</a>
+          <a class="text-link" href="#premiere">Watch the featured film <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="hero-facts" aria-label="Showcase overview">
+          <div><dt>03</dt><dd>Featured projects</dd></div>
+          <div><dt>03</dt><dd>Creative formats</dd></div>
+          <div><dt>01</dt><dd>Open-film premiere</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-collage" aria-label="Preview of featured student projects">
+        <a class="collage-card collage-card-tall" href="#campus-compass">
+          <img src="images/optimized/campus-compass.webp" alt="3D concept of a mobile campus navigation app" width="768" height="960">
+          <span>Campus Compass</span>
+        </a>
+        <a class="collage-card" href="#climate-pulse">
+          <img src="images/optimized/climate-pulse.webp" alt="Glowing circular climate data installation in a dark gallery" width="900" height="900">
+          <span>Climate Pulse</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="projects section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading-row">
+        <div>
+          <p class="eyebrow">Explore the collection</p>
+          <h2 id="projects-title">Made by curious minds.</h2>
+        </div>
+        <p>Use the filters or search to find a project. Save buttons keep your picks on this device.</p>
+      </div>
+
+      <div class="discovery-tools" aria-label="Project discovery controls">
+        <label class="search-box" for="project-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+          <span class="sr-only">Search projects</span>
+          <input id="project-search" type="search" placeholder="Search projects or formats" autocomplete="off">
+        </label>
+        <div class="filter-list" role="group" aria-label="Filter projects by format">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" type="button" data-filter="app" aria-pressed="false">Interactive</button>
+          <button class="filter-chip" type="button" data-filter="film" aria-pressed="false">Film</button>
+          <button class="filter-chip" type="button" data-filter="installation" aria-pressed="false">Installation</button>
+        </div>
+      </div>
+
+      <p class="results-status" id="results-status" role="status" aria-live="polite">Showing all 3 projects.</p>
+
+      <div class="project-grid" id="project-grid">
+        <article class="project-card project-card-tall" id="campus-compass" data-tags="app interactive navigation augmented reality campus" data-title="Campus Compass">
+          <img src="images/optimized/campus-compass.webp" alt="A floating smartphone displaying a stylized campus map with paths and location pins" width="768" height="960" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Interactive app</span>
+            <div>
+              <p class="project-kicker">Wayfinding · UX · AR</p>
+              <h3>Campus Compass</h3>
+              <p>A friendly navigation concept that helps new students find rooms, services, and accessible routes.</p>
+            </div>
+            <div class="card-actions">
+              <button class="button button-on-image project-open" type="button" data-project="campus">View project</button>
+              <button class="save-button" type="button" data-save="campus" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.5h11v16L12 17l-5.5 3.5z"/></svg>
+                <span class="sr-only">Save Campus Compass</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" id="climate-pulse" data-tags="installation interactive climate data visualization environment" data-title="Climate Pulse">
+          <img src="images/optimized/climate-pulse.webp" alt="A luminous ring-shaped climate data sculpture with blue and coral bands" width="900" height="900" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Data installation</span>
+            <div>
+              <p class="project-kicker">Data · Motion · Environment</p>
+              <h3>Climate Pulse</h3>
+              <p>Temperature and ocean records become light, rhythm, and movement in a walk-around gallery piece.</p>
+            </div>
+            <div class="card-actions">
+              <button class="button button-on-image project-open" type="button" data-project="climate">View project</button>
+              <button class="save-button" type="button" data-save="climate" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.5h11v16L12 17l-5.5 3.5z"/></svg>
+                <span class="sr-only">Save Climate Pulse</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card project-card-portrait" id="woven-voices" data-tags="film documentary audio storytelling culture craft" data-title="Woven Voices">
+          <img src="images/optimized/woven-voices.webp" alt="Hands weaving a colorful textile with documentary film and audio motifs" width="720" height="960" loading="lazy">
+          <div class="project-overlay">
+            <span class="project-tag">Short documentary</span>
+            <div>
+              <p class="project-kicker">Film · Sound · Story</p>
+              <h3>Woven Voices</h3>
+              <p>An intimate visual essay about local craft, memory, and the stories carried through handmade textiles.</p>
+            </div>
+            <div class="card-actions">
+              <button class="button button-on-image project-open" type="button" data-project="woven">View project</button>
+              <button class="save-button" type="button" data-save="woven" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 4.5h11v16L12 17l-5.5 3.5z"/></svg>
+                <span class="sr-only">Save Woven Voices</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <h3>No matching projects</h3>
+        <p>Try a different word or clear the current filter.</p>
+        <button class="button button-secondary" id="clear-search" type="button">Show all projects</button>
+      </div>
+    </section>
+
+    <section class="premiere section-shell" id="premiere" aria-labelledby="premiere-title">
+      <div class="premiere-copy">
+        <p class="eyebrow">Open-film spotlight</p>
+        <h2 id="premiere-title">See what open tools can make.</h2>
+        <p><cite>Spring</cite> is an open animated film created by Blender Animation Studio. It demonstrates how story, sound, design, and 3D production come together in one multimedia experience.</p>
+        <a class="button button-primary" href="https://studio.blender.org/projects/spring/pages/about/" target="_blank" rel="noopener noreferrer">
+          Read about the film <span aria-hidden="true">↗</span>
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
+        <details class="transcript">
+          <summary>Video description and accessibility note</summary>
+          <p>The film follows a shepherd girl and her dog as they face ancient spirits and help continue the cycle of spring. The video is dialogue-free and includes music and environmental sound. YouTube playback controls and captions are available when provided by the host.</p>
+        </details>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/WhWc3b3KhnY?rel=0"
+            title="Spring, an open movie by Blender Animation Studio"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-meta">
+          <div>
+            <strong>Spring — Blender Open Movie</strong>
+            <span>7:44 · 3D animation · No dialogue</span>
+          </div>
+          <span class="license-pill">CC BY 4.0</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="about-panel">
+        <p class="eyebrow eyebrow-light">The showcase</p>
+        <h2 id="about-title">Built to be explored.</h2>
+        <p>Studio Spark brings together interactive systems, multimedia presentations, and creative experiments by students of the College of Information Technology.</p>
+        <p>Event details will be announced by the college. This page is ready for desktop and mobile viewing, keyboard navigation, and media-rich browsing.</p>
+        <a class="button button-light" href="#top">Back to the top <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="about-points">
+        <article><span>01</span><h3>Watch</h3><p>Experience film, motion, and sound with accessible playback controls.</p></article>
+        <article><span>02</span><h3>Explore</h3><p>Filter projects by format and open concise project stories.</p></article>
+        <article><span>03</span><h3>Save</h3><p>Keep a personal shortlist of projects on the same device.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">S</span><span>Studio Spark</span></a>
+        <p>A student multimedia showcase for the College of Information Technology.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer navigation">
+        <a href="#projects">Projects</a>
+        <a href="#premiere">Premiere</a>
+        <a href="#about">About</a>
+        <a href="media-attribution.md">Media credits</a>
+      </div>
+      <p class="copyright">© <span id="current-year">2026</span> Studio Spark. Student examination project.</p>
+    </div>
+  </footer>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close icon-button" type="button" aria-label="Close project details">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="eyebrow" id="dialog-format">Project format</p>
+    <h2 id="dialog-title">Project title</h2>
+    <p id="dialog-description"></p>
+    <dl class="dialog-details" id="dialog-details"></dl>
+  </dialog>
+</body>
+</html>
